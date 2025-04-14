@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: backgroundShift 20s infinite;
+}
+
+@keyframes backgroundShift {
+    0% {
+        background: linear-gradient(135deg, #0eac77, #2a5298);
+    }
+
+    25% {
+        background: linear-gradient(135deg, #c454ba, #3521e7)
+    }
+
+    50% {
+        background: linear-gradient(135deg, #61eb61, #eeeb5c);
+    }
+
+    75% {
+        background: linear-gradient(135deg, #abc70d, #d34013)
+    }
+
+    100% {
+        background: linear-gradient(135deg, #2a5298, #0eac77);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px 50px 10px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+input[type="number"] {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+    width: 250px;
+    text-align: center;
+    background: #f1f1f1;
+    color: #333;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background: #00d2ff;
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.7);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 1);
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .container{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    #result{
+        font-size: 15px;
+    }
+
+    button{
+        font-size: 16px;
+    }
+
+    input[type="number"]{
+        font-size: 18px;
+        width: 150px;
+    }
+}
